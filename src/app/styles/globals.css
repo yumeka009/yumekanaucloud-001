@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .container-responsive {
+    @apply w-full mx-auto min-w-[345px] max-w-[1920px];
+  }
+
+  .container-normal {
+    @apply w-full mx-auto max-w-[1440px];
+  }
+
+  .text-catchphrase {
+    @apply text-3xl md:text-5xl lg:text-[80px] font-black;
+  }
+
+  .text-kv {
+    @apply text-2xl md:text-4xl lg:text-[56px] font-bold;
+  }
+
+  .container-kv {
+    @apply w-full h-auto md:h-[720px] lg:h-[960px] max-w-[1440px] mx-auto;
+  }
+
+  .input-form {
+    @apply w-full min-w-[345px] h-[40px] max-w-full md:max-w-[345px];
+  }
+
+  .section-margins {
+    @apply px-5 md:px-20 lg:px-44;
+  }
+
+  .header {
+    @apply h-[60px] md:h-[72px];
+  }
+
+  .logo {
+    @apply w-[100px] h-[40px] md:w-[120px] md:h-[47px] lg:w-[135px] lg:h-[53px];
+  }
+
+  .icon {
+    @apply w-5 h-5 md:w-6 md:h-6;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Container Classes */
+.container-responsive {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 345px;
+  max-width: 1920px;
+}
+
+.container-normal {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+/* Typography Classes */
+.text-catchphrase {
+  font-weight: 900;
+  font-size: 1.875rem; /* 30px */
+}
+
+@media (min-width: 768px) {
+  .text-catchphrase {
+    font-size: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-catchphrase {
+    font-size: 5rem; /* 80px */
+  }
+}
+
+.text-kv {
+  font-weight: 700;
+  font-size: 1.5rem; /* 24px */
+}
+
+@media (min-width: 768px) {
+  .text-kv {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-kv {
+    font-size: 3.5rem; /* 56px */
+  }
+}
+
+/* Layout Classes */
+.container-kv {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container-kv {
+    height: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-kv {
+    height: 960px;
+  }
+}
+
+.input-form {
+  width: 100%;
+  min-width: 345px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .input-form {
+    max-width: 345px;
+  }
+}
+
+/* Spacing Classes */
+.section-margins {
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem; /* 20px */
+}
+
+@media (min-width: 768px) {
+  .section-margins {
+    padding-left: 5rem; /* 80px */
+    padding-right: 5rem; /* 80px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-margins {
+    padding-left: 11rem; /* 176px */
+    padding-right: 11rem; /* 176px */
+  }
+}
+
+.header {
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 72px;
+  }
+}
+
+/* Logo and Icon Sizes */
+.logo {
+  width: 100px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 120px;
+    height: 47px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 135px;
+    height: 53px;
+  }
+}
+
+.icon {
+  width: 1.25rem; /* 20px */
+  height: 1.25rem; /* 20px */
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 1.5rem; /* 24px */
+    height: 1.5rem; /* 24px */
+  }
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .sp-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+  
+  .mobile-stack {
+    flex-direction: column;
+  }
+}
